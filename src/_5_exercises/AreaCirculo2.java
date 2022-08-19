@@ -20,30 +20,30 @@ public class AreaCirculo2 {
             if(tipoNumerico == 1) {
                 float areaCirculo = (RAIO * RAIO) * PI;
 
-                System.out.println("Área do círculo = " + RAIO + "² x " + PI + " = " + areaCirculo);
+                System.out.print("\nÁrea do círculo = " + RAIO + "² x " + PI + " = " + areaCirculo);
             } else if(tipoNumerico == 2) {
                 int areaCirculo = (int) ((RAIO * RAIO) * PI);
 
-                System.out.println("Área do círculo = " + RAIO + "² x " + PI + " = " + areaCirculo);
+                System.out.print("\nÁrea do círculo = " + RAIO + "² x " + PI + " = " + areaCirculo);
             } else {
-                System.out.println("Valor inválido!");
+                System.out.print("\nValor inválido!");
             }
         } else if(exibirFormula.equals("N") || exibirFormula.equals("n")) {
             if(tipoNumerico == 1) {
                 float areaCirculo = (RAIO * RAIO) * PI;
 
-                System.out.println("Resultado: " + areaCirculo);
+                System.out.print("\nResultado: " + areaCirculo);
             } else if(tipoNumerico == 2) {
                 int areaCirculo = (int) ((RAIO * RAIO) * PI);
 
-                System.out.println("Resultado: " + areaCirculo);
+                System.out.print("\nResultado: " + areaCirculo);
             } else {
-                System.out.println("Valor inválido!");
+                System.out.print("\nValor inválido!");
             }
         } else {
-            System.out.println("Valor inválido!");
+            System.out.print("\nValor inválido!");
         }
-        
+
         entrada.close();
     }
 }
