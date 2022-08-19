@@ -9,8 +9,6 @@ public class AreaCirculo2 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-
-
         System.out.print("\nExibição da fórmula [S/N]: ");
         String exibirFormula = entrada.next();
 
@@ -45,5 +43,7 @@ public class AreaCirculo2 {
         } else {
             System.out.println("Valor inválido!");
         }
+        
+        entrada.close();
     }
 }
