@@ -3,6 +3,9 @@ package _5_exercises;
 import java.util.Scanner;
 
 public class ValorProdutoFrete3 {
+
+    static final int FRETE = 15;
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
@@ -14,7 +17,7 @@ public class ValorProdutoFrete3 {
 
         System.out.print("\n");
 
-        if (quantidadeProdutos >= 1) {
+        if(quantidadeProdutos >= 1) {
             for (int i = 1; i <= quantidadeProdutos; i++) {
                 System.out.print("Digite o valor do " + i + "º produto: ");
                 float valorProduto = entrada.nextFloat();
@@ -22,13 +25,8 @@ public class ValorProdutoFrete3 {
                 somaValoresProdutos += (float) (valorProduto);
             }
 
-            if (somaValoresProdutos >= 100) {
-                System.out.print("\nValor final: " + somaValoresProdutos);
-            } else {
-                int frete = 15;
-
-                System.out.print("\nValor final com frete: " + (somaValoresProdutos + frete));
-            }
+            System.out.print("\n");
+            System.out.print(somaValoresProdutos >= 100 ? "Valor final: " + somaValoresProdutos : "Valor final com frete: " + (somaValoresProdutos + FRETE));
         } else {
             System.out.print("Valor inválido!");
         }
