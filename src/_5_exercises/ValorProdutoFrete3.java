@@ -30,5 +30,7 @@ public class ValorProdutoFrete3 {
         } else {
             System.out.print("Valor inválido!");
         }
+        
+        entrada.close();
     }
 }
