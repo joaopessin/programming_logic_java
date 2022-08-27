@@ -2,7 +2,7 @@ package _6_exersises;
 
 import java.util.Scanner;
 
-public class MediaNotasAluno {
+public class MediaNotasAluno1 {
     static final Integer NOTA_MINIMA_GERAL = 150;
     static final Integer NOTA_MINIMA = 60;
     static final Integer NOTA_MAXIMA = 200;
