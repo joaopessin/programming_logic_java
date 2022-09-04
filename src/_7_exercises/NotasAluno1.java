@@ -35,9 +35,9 @@ public class NotasAluno1 {
             notaRecuperacao = leitura.nextFloat();
 
             float novaMediaNotas = (mediaNotas + notaRecuperacao) / 2;
-            boolean alunoAprovado = novaMediaNotas >= 7;
+            boolean alunoReprovado = novaMediaNotas < 7;
 
-            System.out.println(alunoAprovado ? "Aluno(a) APROVADO(A)!" : "Aluno(a) REPROVADO(A)!");
+            System.out.println(alunoReprovado ? "Aluno(a) REPROVADO(A)!" : "Aluno(a) APROVADO(A)!");
 
         } else {
             System.out.println("\nAluno(a) APROVADO(A) direto!");
