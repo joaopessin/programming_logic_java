@@ -6,7 +6,7 @@ public class NotasAluno1 {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
 
-        System.out.print("\"Calcular Média de Notas\"\n");
+        System.out.println("\"Calcular Média de Notas\"");
         System.out.print("\nDigite quantas notas deseja informar: ");
         int quantidadeNotas = leitura.nextInt();
 
@@ -27,7 +27,7 @@ public class NotasAluno1 {
         System.out.print("\nMédia das notas do(a) aluno(a): " + mediaNotas);
 
         if (mediaNotas < 4) {
-            System.out.print("\nAluno(a) REPROVADO(A) direto!");
+            System.out.println("\nAluno(a) REPROVADO(A) direto!");
         } else if (mediaNotas < 7) {
             System.out.print("\nAluno(a) de RECUPERAÇÃO!\n");
 
@@ -35,15 +35,14 @@ public class NotasAluno1 {
             notaRecuperacao = leitura.nextFloat();
 
             float novaMediaNotas = (mediaNotas + notaRecuperacao) / 2;
+            boolean alunoAprovado = novaMediaNotas >= 7;
 
-            if (novaMediaNotas < 7) {
-                System.out.print("\nAluno(a) REPROVADO(A)!");
-            } else {
-                System.out.print("\nAluno(a) APROVADO(A)!");
-            }
+            System.out.println(alunoAprovado ? "Aluno(a) APROVADO(A)!" : "Aluno(a) REPROVADO(A)!");
 
         } else {
-            System.out.print("\nAluno(a) APROVADO(A) direto!");
+            System.out.println("\nAluno(a) APROVADO(A) direto!");
         }
+
+        leitura.close();
     }
 }
