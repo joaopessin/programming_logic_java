@@ -1,4 +1,4 @@
-package _45_logica_7_4;
+package _7_exercises;
 
 public class Placar2 {
     public static void main(String[] args) {
