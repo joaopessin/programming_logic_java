@@ -5,17 +5,16 @@ import java.util.Scanner;
 public class CalcularValorTroco2 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.print("Digite o valor do produto: ");
-        Double valorProduto = scanner1.nextDouble();
+        System.out.print("\nDigite o valor do produto: ");
+        float valorProduto = sc.nextFloat();
 
-        Scanner scanner2 = new Scanner(System.in);
         System.out.print("Digite o valor dado pelo cliente: ");
-        Double valorCliente = scanner2.nextDouble();
+        float valorCliente = sc.nextFloat();
 
-        Double resultado = valorCliente - valorProduto;
+        float resultado = valorCliente - valorProduto;
 
-        System.out.println("Troco: " + resultado);
+        System.out.printf("\nTroco: R$ %.2f", resultado);
     }
 }
