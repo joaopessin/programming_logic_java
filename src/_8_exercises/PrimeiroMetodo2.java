@@ -22,8 +22,7 @@ public class PrimeiroMetodo2 {
         Boolean posicaoValida = (opcaoCurso >= 0) && (opcaoCurso < cursos.length);
 
         if (!posicaoValida) {   // Negação da posição válida
-            System.err.println("\nOpção inválida!");
-            System.exit(1);
+            opcaoInvalida();
         }
 
         imprimirTraco();
@@ -42,8 +41,7 @@ public class PrimeiroMetodo2 {
         posicaoValida = (opcaoPagamento >= 0) && (opcaoPagamento < formasPagamento.length);
 
         if (!posicaoValida) {
-            System.err.println("\nOpção inválida!");
-            System.exit(1);
+            opcaoInvalida();
         }
 
         String cursoEscolhido = cursos[opcaoCurso];
@@ -51,12 +49,17 @@ public class PrimeiroMetodo2 {
 
         imprimirTraco();
 
-        System.out.println("Curso escolhido: " + cursoEscolhido + "\nForma de pagamento escolhida: " + pagamentoEscolhido);
+        System.out.println("Curso escolhido: \"" + cursoEscolhido + "\"\nForma de pagamento escolhida: \"" + pagamentoEscolhido + "\"");
 
         sc.close();
     }
 
     private static void imprimirTraco() {   // Método / função
         System.out.println("\n---------- | ---------- | ----------\n");
+    }
+
+    private static void opcaoInvalida() {
+        System.err.println("\nOpção inválida!");
+        System.exit(1);
     }
 }
