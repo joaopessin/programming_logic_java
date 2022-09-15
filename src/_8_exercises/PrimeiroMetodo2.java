@@ -16,7 +16,7 @@ public class PrimeiroMetodo2 {
             System.out.println("[" + (i + 1) + "] " + cursos[i]);
         }
 
-        System.out.print("\nOpção: ");
+        System.out.print("\nOpção de curso: ");
         Integer opcaoCurso = sc.nextInt() - 1;
 
         Boolean posicaoValida = (opcaoCurso >= 0) && (opcaoCurso < cursos.length);
@@ -24,23 +24,39 @@ public class PrimeiroMetodo2 {
         if (!posicaoValida) {   // Negação da posição válida
             System.err.println("\nOpção inválida!");
             System.exit(1);
-        } else {
-            if (opcaoCurso == 0) {
-                System.out.println("\nVocê se cadastrou no curso de \"" + cursos[0] + "\" com sucesso!");
-                System.exit(0);
-            } else if (opcaoCurso == 1) {
-                System.out.println("\nVocê se cadastrou no curso de \"" + cursos[1] + "\" com sucesso!");
-                System.exit(0);
-            } else {
-                System.out.println("\nVocê se cadastrou no curso de \"" + cursos[2] + "\" com sucesso!");
-                System.exit(0);
-            }
         }
+
+        imprimirTraco();
+
+        String[] formasPagamento = new String[] { "Cartão", "Boleto" };
+
+        System.out.println("Escolha uma forma de pagamento: ");
+
+        for (int i = 0; i < formasPagamento.length; i++) {
+            System.out.println("[" + (i + 1) + "] " + formasPagamento[i]);
+        }
+
+        System.out.print("\nOpção de pagamento: ");
+        Integer opcaoPagamento = sc.nextInt() - 1;
+
+        posicaoValida = (opcaoPagamento >= 0) && (opcaoPagamento < formasPagamento.length);
+
+        if (!posicaoValida) {
+            System.err.println("\nOpção inválida!");
+            System.exit(1);
+        }
+
+        String cursoEscolhido = cursos[opcaoCurso];
+        String pagamentoEscolhido = formasPagamento[opcaoPagamento];
+
+        imprimirTraco();
+
+        System.out.println("Curso escolhido: " + cursoEscolhido + "\nForma de pagamento escolhida: " + pagamentoEscolhido);
 
         sc.close();
     }
 
     private static void imprimirTraco() {   // Método / função
-        System.out.println("\n-------------------------");
+        System.out.println("\n---------- | ---------- | ----------\n");
     }
 }
