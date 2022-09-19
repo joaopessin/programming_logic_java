@@ -50,9 +50,9 @@ public class PrimeiroMetodo1 {
         sc.close();
     }
 
-    private static void loopRepeticao(String[] cursos) {
-        for (int i = 0; i < cursos.length; i++) {
-            System.out.println("[" + (i + 1) + "] " + cursos[i]);
+    private static void loopRepeticao(String[] vetor) {
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println("[" + (i + 1) + "] " + vetor[i]);
         }
     }
 
@@ -65,4 +65,3 @@ public class PrimeiroMetodo1 {
         System.exit(1);
     }
 }
-
