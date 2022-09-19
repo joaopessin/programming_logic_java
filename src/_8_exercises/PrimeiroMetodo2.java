@@ -1,8 +1,8 @@
-package _48_logica_8_2;
+package _2_Exercises;
 
 import java.util.Scanner;
 
-public class PrimeiroMetodo2 {
+public class PrimeiroMetodo1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -12,9 +12,7 @@ public class PrimeiroMetodo2 {
 
         System.out.println("Escolha dentre os cursos abaixo: ");
 
-        for (int i = 0; i < cursos.length; i++) {
-            System.out.println("[" + (i + 1) + "] " + cursos[i]);
-        }
+        loopRepeticao(cursos);
 
         System.out.print("\nOpção de curso: ");
         Integer opcaoCurso = sc.nextInt() - 1;
@@ -31,9 +29,7 @@ public class PrimeiroMetodo2 {
 
         System.out.println("Escolha uma forma de pagamento: ");
 
-        for (int i = 0; i < formasPagamento.length; i++) {
-            System.out.println("[" + (i + 1) + "] " + formasPagamento[i]);
-        }
+        loopRepeticao(formasPagamento);
 
         System.out.print("\nOpção de pagamento: ");
         Integer opcaoPagamento = sc.nextInt() - 1;
@@ -54,6 +50,12 @@ public class PrimeiroMetodo2 {
         sc.close();
     }
 
+    private static void loopRepeticao(String[] cursos) {
+        for (int i = 0; i < cursos.length; i++) {
+            System.out.println("[" + (i + 1) + "] " + cursos[i]);
+        }
+    }
+
     private static void imprimirTraco() {   // Método / função
         System.out.println("\n---------- | ---------- | ----------\n");
     }
@@ -63,3 +65,4 @@ public class PrimeiroMetodo2 {
         System.exit(1);
     }
 }
+
