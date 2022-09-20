@@ -2,7 +2,7 @@ package _8_exercises;
 
 import java.util.Scanner;
 
-public class PrimeiroMetodo1 {
+public class PrimeiroMetodo2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,11 +10,9 @@ public class PrimeiroMetodo1 {
 
         String[] cursos = new String[] { "Java EE", "Spring", "Java OO Avançado" };
 
-        System.out.println("Escolha dentre os cursos abaixo: ");
-
+        escrever("Escolha dentre os cursos abaixo: ");
         loopRepeticao(cursos);
-
-        System.out.print("\nOpção de curso: ");
+        escreverMesmaLinha("\nOpção de curso: ");
         Integer opcaoCurso = sc.nextInt() - 1;
 
         Boolean posicaoValida = (opcaoCurso >= 0) && (opcaoCurso < cursos.length);
@@ -27,11 +25,9 @@ public class PrimeiroMetodo1 {
 
         String[] formasPagamento = new String[] { "Cartão", "Boleto" };
 
-        System.out.println("Escolha uma forma de pagamento: ");
-
+        escrever("Escolha uma forma de pagamento: ");
         loopRepeticao(formasPagamento);
-
-        System.out.print("\nOpção de pagamento: ");
+        escreverMesmaLinha("\nOpção de pagamento: ");
         Integer opcaoPagamento = sc.nextInt() - 1;
 
         posicaoValida = (opcaoPagamento >= 0) && (opcaoPagamento < formasPagamento.length);
@@ -44,9 +40,7 @@ public class PrimeiroMetodo1 {
         String pagamentoEscolhido = formasPagamento[opcaoPagamento];
 
         imprimirTraco();
-
-        System.out.println("Curso escolhido: \"" + cursoEscolhido + "\"\nForma de pagamento escolhida: \"" + pagamentoEscolhido + "\"");
-
+        escrever("Curso escolhido: \"" + cursoEscolhido + "\"\nForma de pagamento escolhida: \"" + pagamentoEscolhido + "\"");
         sc.close();
     }
 
@@ -63,5 +57,13 @@ public class PrimeiroMetodo1 {
     private static void opcaoInvalida() {
         System.err.println("\nOpção inválida!");
         System.exit(1);
+    }
+
+    private static void escrever(String frase) {
+        System.out.println(frase);
+    }
+
+    private static void escreverMesmaLinha(String frase) {
+        System.out.print(frase);
     }
 }
