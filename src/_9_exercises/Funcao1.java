@@ -1,4 +1,4 @@
-package _49_python_brasil;
+package _9_exercises;
 
 import java.util.Scanner;
 
@@ -11,14 +11,14 @@ public class Funcao1 {
 
         System.out.print("\n");
 
-        construirPrograma(valorEscolhido);
+        imprimirPrograma(valorEscolhido);
         sc.close();
     }
 
-    private static void construirPrograma(int valor) {
+    private static void imprimirPrograma(int valor) {
         for (int i = 1; i <= valor; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.print(i + " ");
+                System.out.print(j + " ");
             }
 
             System.out.print("\n");
