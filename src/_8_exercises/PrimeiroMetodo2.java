@@ -46,8 +46,14 @@ public class PrimeiroMetodo2 {
     }
 
     private static void imprimirVetor(String[] vetor) {
-        for (int i = 0; i < vetor.length; i++) {
-            System.out.println("[" + (i + 1) + "] " + vetor[i]);
+        imprimirVetor(vetor, 0);
+    }
+
+    private static void imprimirVetor(String[] vetor, int i) {  // Recursividade
+        System.out.println("[" + (i + 1) + "] " + vetor[i]);
+
+        if (++i < vetor.length) {
+            imprimirVetor(vetor, i);
         }
     }
 
