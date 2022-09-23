@@ -5,30 +5,25 @@ import java.util.Scanner;
 public class PrimeiroMetodo2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        imprimirTraco();
-
         String[] cursos = new String[] { "Java EE", "Spring", "Java OO Avançado" };
 
+        imprimirTraco();
         escrever("Escolha dentre os cursos abaixo: ");
-        loopRepeticao(cursos);
-        escreverMesmaLinha("\nOpção de curso: ");
-        Integer opcaoCurso = sc.nextInt() - 1;
+        imprimirVetor(cursos);
 
+        Integer opcaoCurso = lerCurso("\nOpção de curso: ", sc);
         Boolean posicaoValida = (opcaoCurso >= 0) && (opcaoCurso < cursos.length);
 
         if (!posicaoValida) {   // Negação da posição válida
             opcaoInvalida();
         }
 
-        imprimirTraco();
-
         String[] formasPagamento = new String[] { "Cartão", "Boleto" };
 
+        imprimirTraco();
         escrever("Escolha uma forma de pagamento: ");
-        loopRepeticao(formasPagamento);
-        escreverMesmaLinha("\nOpção de pagamento: ");
-        Integer opcaoPagamento = sc.nextInt() - 1;
+        imprimirVetor(formasPagamento);
+        Integer opcaoPagamento = lerCurso("\nOpção de pagamento: ", sc);
 
         posicaoValida = (opcaoPagamento >= 0) && (opcaoPagamento < formasPagamento.length);
 
@@ -44,14 +39,20 @@ public class PrimeiroMetodo2 {
         sc.close();
     }
 
-    private static void loopRepeticao(String[] vetor) {
+    private static Integer lerCurso(String frase, Scanner sc) {
+        escreverMesmaLinha(frase);
+        Integer opcaoCurso = sc.nextInt() - 1;
+        return opcaoCurso;
+    }
+
+    private static void imprimirVetor(String[] vetor) {
         for (int i = 0; i < vetor.length; i++) {
             System.out.println("[" + (i + 1) + "] " + vetor[i]);
         }
     }
 
     private static void imprimirTraco() {   // Método / função
-        System.out.println("\n---------- | ---------- | ----------\n");
+        System.out.println("------------------------------");
     }
 
     private static void opcaoInvalida() {
