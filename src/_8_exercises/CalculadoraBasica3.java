@@ -1,4 +1,4 @@
-package _53_logica_8_7;
+package _8_exercises;
 
 import java.util.Scanner;
 

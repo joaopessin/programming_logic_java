@@ -1,4 +1,4 @@
-package _49_python_brasil;
+package _9_exercises;
 
 import java.util.Scanner;
 
