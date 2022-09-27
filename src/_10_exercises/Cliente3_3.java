@@ -1,4 +1,4 @@
-package _11_exercises._3_metodo_de_instancia;
+package _10_exercises._3_metodo_de_instancia;
 
 public class Cliente {
     String primeiroNome;
@@ -8,6 +8,11 @@ public class Cliente {
 
     public static String obterNomeCompleto(Cliente cliente) {
         String nomeCompleto = cliente.primeiroNome + " " + cliente.ultimoNome;
+        return nomeCompleto;
+    }
+
+    public String obterNomeCompleto() {
+        String nomeCompleto = primeiroNome + " " + ultimoNome;
         return nomeCompleto;
     }
 }
