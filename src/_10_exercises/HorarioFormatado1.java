@@ -2,7 +2,7 @@ package _10_exercises;
 
 import java.util.Scanner;
 
-public class horarioFormatado1 {
+public class HorarioFormatado1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String escolhaUsuario = null;
