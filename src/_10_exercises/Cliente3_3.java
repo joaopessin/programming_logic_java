@@ -15,4 +15,9 @@ public class Cliente {
         String nomeCompleto = primeiroNome + " " + ultimoNome;
         return nomeCompleto;
     }
+
+    public String obterDDD() {
+        String ddd = telefone.substring(0, 2);
+        return ddd;
+    }
 }
