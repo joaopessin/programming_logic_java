@@ -1,4 +1,4 @@
-package _11_exercises._5_pedido_de_vendas;
+package _10_exercises;
 
 import java.util.Scanner;
 
