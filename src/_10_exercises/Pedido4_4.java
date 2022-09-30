@@ -1,4 +1,4 @@
-package _11_exercises._5_pedido_de_vendas;
+package _10_exercises;
 
 public class Pedido4_4 {
     Integer codigo, desconto;
