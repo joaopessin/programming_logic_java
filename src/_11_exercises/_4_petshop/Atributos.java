@@ -3,7 +3,7 @@ package _11_exercises._4_petshop;
 import java.util.Scanner;
 
 public class Atributos {
-  static Scanner sc = new Scanner(System.in);
+  public static Scanner sc = new Scanner(System.in);
 
   public static void definirNome(Pet pet) {
     System.out.print("Nome do Pet: ");
@@ -28,9 +28,9 @@ public class Atributos {
   public static void definirAtributos(Pet pet) {
     Informacoes.quebrarLinha();
 
-    Atributos.definirNome(pet);
-    Atributos.definirRaca(pet);
-    Atributos.definirSexo(pet);
-    Atributos.definirIdade(pet);
+    definirNome(pet);
+    definirRaca(pet);
+    definirSexo(pet);
+    definirIdade(pet);
   }
 }
