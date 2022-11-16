@@ -1,6 +1,6 @@
 package _12_exercises;
 
-public class Conta {
+public abstract class Conta {
     protected String descricao, dataVencimento;
     protected Double valor;
     protected Fornecedor fornecedor;
@@ -17,15 +17,12 @@ public class Conta {
         } else if (this.situacaoConta.equals(SituacaoConta.CANCELADA)) {
             System.out.println("Não se pode cancelar uma conta que já está cancelada!");
         } else {
-            System.out.println("Fornecedor: " + this.fornecedor.getNome()
-                    + "\nDescrição: " + this.descricao
-                    + "\nData de Vencimento: " + this.dataVencimento
-                    + "\nValor: R$" + this.valor);
-
             this.situacaoConta = SituacaoConta.CANCELADA;
             System.out.println("\nConta CANCELADA com sucesso!");
         }
     }
+
+    public abstract void exibirDetalhes();
 
     public void setDescricao(String descricao) { this.descricao = descricao; }
     public void setDataVencimento(String dataVencimento) { this.dataVencimento = dataVencimento; }
